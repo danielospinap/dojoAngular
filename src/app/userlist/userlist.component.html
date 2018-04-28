@@ -1,0 +1,23 @@
+<form (ngSubmit)="getAllUser(nameForm);" #nameForm="ngForm" class="example-form" style="margin: 0 auto;">
+  <mat-form-field class="example-full-width">
+  <input matInput placeholder="userName" [(ngModel)]="username" name="user" required>
+</mat-form-field>
+
+<button class="example-button-row" mat-button block>Buscar</button>
+</form>
+
+<mat-card  *ngIf="exist">
+<mat-card-header>
+<mat-card-title>
+  <img src="{{users.avatar_url}}" width="300" height="300">
+
+  <H3>Nombre: {{users.login}}</H3>
+  <h4>Numero de repositorios: {{users.public_repos}}</h4>
+
+
+</mat-card-title>
+</mat-card-header>
+
+
+
+</mat-card>
